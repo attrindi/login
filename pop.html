@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <style>
+        #popupBtn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<button id="popupBtn" onclick="showPopup()">Open Popup</button>
+
+<dialog id="myDialog">
+    <p>Hi</p>
+    <button onclick="closePopup()">Close</button>
+</dialog>
+
+<script>
+    function showPopup() {
+        var dialog = document.getElementById('myDialog');
+        dialog.showModal();
+    }
+
+    function closePopup() {
+        var dialog = document.getElementById('myDialog');
+        dialog.close();
+    }
+</script>
+
+</body>
+</html>
